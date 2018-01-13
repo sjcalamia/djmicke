@@ -1,4 +1,5 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/nebula-appbar-layout/nebula-appbar.html">
 
 <dom-module id="djmicke-app">
   <template>
@@ -6,10 +7,17 @@
       :host {
         display: block;
       }
+      [slot=center] {
+        text-align: center;
+      }
     </style>
-    <h2>Hello [[prop1]]!</h2>
-  </template>
 
+    <nebula-appbar>
+      <h5><a href="#production">Producer</a></h5>
+      <h1 slot="center">DJ Micke</h1>
+      <h5><a href="#production">DJ</a></h5>
+    </nebula-appbar>
+  </template>
   <script>
     /**
      * @customElement
