@@ -82,11 +82,25 @@
         margin: 0;
         background-color: rgb(33,33,33);
         background-image:
-          linear-gradient(15deg, #13547a 0%, #80d0c7 100%),
-          linear-gradient(to top, #a8edea 0%, #fed6e3 100%),
-          linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
-        background-blend-mode: multiply, screen, soft-light;
-        background-size: cover;
+          linear-gradient(15deg, rgba(19, 84, 122, .75) 0%, rgba(128, 208, 199, .75) 100%),
+          url('/img/micke-multi.jpg'),
+          linear-gradient(to top, rgba(172, 203, 238, 1) 0%, rgba(231, 240, 253, .5) 100%),
+          url('/img/bnwmicke.jpg'),
+          linear-gradient(to top, rgba(168, 237, 234, 1) 0%, rgba(254, 214, 227, 1) 100%);
+          /* url('/img/graffgirl.jpg'), */
+        background-blend-mode:
+          darken,
+          screen,
+          hard-light,
+          luminosity,
+          normal;
+        background-size:
+          auto,
+          auto 150%,
+          auto,
+          cover,
+          auto,
+          auto;
         font-face: var(--font-copy);
       }
       h1, h2 {
