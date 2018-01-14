@@ -1,0 +1,94 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<!--
+`<nebula-appbar>` is a custom element that provides a horizontal flexbox layout with slots for left, center and right areas.
+
+## Import
+
+```
+<link rel="import" href="/bower_components/nebula-appbar-layout/nebula-appbar.html"> 
+```
+
+## Usage
+
+The element will automatically fill its parent container element.
+
+The element provides slots for left, center and/or right areas. The left and right slots will fit their content, while the center slot is fluid and will fill any remaining space.
+
+```html
+<nebula-appbar>
+  <div slot="left"></div>
+  <div slot="center"></div>
+  <div slot="right"></div>
+</nebula-appbar>
+```
+
+## Styling
+
+The element can be styled using standard CSS properties. You can style content inserted into slots using the slot attribute.
+
+```css
+[slot=center] {
+  text-align: center;
+}
+```
+
+-->
+<dom-module id="nebula-appbar">
+  <template>
+    <style>
+      :host {
+        position: relative;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -webkit-align-items: center;
+        align-items: center;
+        box-sizing: border-box;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        height: fit-content;
+        width: 100%;
+      }
+      :host ::slotted(*) {
+        overflow: hidden;
+      }
+      :host ::slotted([slot=left]) {
+        -webkit-flex: none;
+        flex: none;
+      }
+      :host ::slotted([slot=center]) {
+        -webkit-flex: 1 1 auto;
+        flex: 1 1 auto;
+      }
+      :host ::slotted([slot=right]) {
+        -webkit-flex: none;
+        flex: none;
+      }
+      :host([hidden]) {
+        display: none;
+      }
+      :host([disabled]) {
+        pointer-events: none !important;
+        cursor: default !important;
+        opacity: var(--nebula-ui-disabled-opacity, 0.6) !important;
+      }
+    </style>
+    <slot name="left"></slot>
+    <slot name="center"></slot>
+    <slot name="right"></slot>
+  </template>
+  <script>
+  (function() {
+    'use strict'
+    
+    class NebulaAppBar extends Polymer.Element {
+      static get is() { return 'nebula-appbar' }
+    }
+    customElements.define(NebulaAppBar.is, NebulaAppBar)
+  }())
+  </script>
+</dom-module>
