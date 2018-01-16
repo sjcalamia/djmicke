@@ -1,5 +1,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../../bower_components/nebula-appbar/nebula-appbar.html">
+<link rel="import" href="djmicke-logo.html">
 
 <dom-module id="djmicke-app">
   <template>
@@ -24,12 +25,22 @@
       nebula-appbar {
         margin: 0px;
         background:
-          linear-gradient(to left, #434343 0%, black 100%),
+          linear-gradient(to left, rgba(67,67,67,.5) 0%, rgba(0,0,0,1) 100%),
+          url("/img/bnwmicke.jpg"),
           linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%),
-          radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
-        /* background-image: linear-gradient(to right, #434343 0%, black 100%); */
-        background-blend-mode: darken, multiply, screen;
-        height: 4em;
+          radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%),
+          linear-gradient(to right, black 0%, #434343 100%);
+        /* background-image: linear-gradient(to right, black 100%, #434343 0%); */
+        background-blend-mode:
+          multiply,
+          difference,
+          overlay,
+          difference,
+          normal;
+        background-size: cover;
+        background-position: 0 37%;
+        height: var(--header-height);
+        position: sticky;
       }
       [slot=left] {
         text-align: right;
@@ -40,12 +51,16 @@
         text-align: left;
         align-items: baseline;
         justify-content: flex-start;
+        mix-blend-mode: exclusion;
       }
-      [slot=center] h1, [slot=center] h3 {
+      [slot=center] djmicke-logo, [slot=center] h1, [slot=center] h3 {
         padding-left: 1em;
         display: flex;
         justify-content: left;
         align-items: center;
+      }
+      [slot=center] djmicke-logo, [slot=center] h1 {
+        font-style: italic;
       }
       [slot=center] h3 {
       }
@@ -56,7 +71,7 @@
     </style>
 
     <nebula-appbar>
-      <div slot="center"><h1>micke</h1><!-- <h3>&nbsp;<a href="#production">Producer</a>&nbsp;|&nbsp;<a href="#production">DJ</a></h3>--></div>
+      <section slot="center"><djmicke-logo logotext$="[[siteName]]" kind="image" size="short"></djmicke-logo></section>
     </nebula-appbar>
   </template>
   <script>
@@ -68,9 +83,9 @@
       static get is() { return 'djmicke-app'; }
       static get properties() {
         return {
-          prop1: {
+          siteName: {
             type: String,
-            value: 'djmicke-app'
+            value: 'micke'
           }
         };
       }

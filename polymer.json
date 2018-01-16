@@ -1,4 +1,17 @@
 {
+	"entrypoint": "index.html",
+  "shell": "src/djmicke-app.html",
+	"sources": [
+		"src/**/*",
+		"data/**/*",
+		"styles/**/*",
+		"img/**/*",
+		"bower.json"
+  ],
+	"extraDependencies": [
+		"manifest.json",
+		"bower_components/webcomponentsjs/webcomponents-lite.js"
+	],
   "lint": {
     "rules": [
       "polymer-2"

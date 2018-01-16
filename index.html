@@ -9,13 +9,20 @@
 
     <!-- See https://goo.gl/OOhYW5 -->
     <link rel="manifest" href="/manifest.json">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Michroma" />
-    <script src="/bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Michroma" /> -->
+    <link rel="stylesheet" href="/styles/fonts.css">
     <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Comfortaa|Geo|Gruppo|Inconsolata" rel="stylesheet">
+    <script src="/bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+    <script>
+      window.Polymer = {
+        rootPath: '/',
+        importPath: '/'
+      }
+    </script>
 
     <style>
       :root {
-        --font-title: "ArchiveBlack","Helvetica Neue", Helvetica, Arial, sans-serif;
+        --font-title: "Gruppo","Helvetica Neue", Helvetica, Arial, sans-serif;
         --font-disp: "Comfortaa","Helvetica Neue", Helvetica, Arial, sans-serif;
         --font-copy: "Geo","Helvetica Neue", Helvetica, Arial, sans-serif;
         --font-mono: "Inconsolata", monospace;
@@ -27,6 +34,8 @@
         --fs-lg: 1.5em;
         --fs-xl: 2em;
         --fs-xxl: 3em;
+
+        --header-height: 4em;
       }
       @media (max-width: 2500px) {
         :root {
@@ -74,7 +83,6 @@
       }
       html {
         font-size: var(--fs-base);
-
       }
       body {
         height: 100vh;
@@ -82,26 +90,44 @@
         margin: 0;
         background-color: rgb(33,33,33);
         background-image:
+          url('/img/full-logo-white.png'),
           linear-gradient(15deg, rgba(19, 84, 122, .75) 0%, rgba(128, 208, 199, .75) 100%),
           url('/img/micke-multi.jpg'),
           linear-gradient(to top, rgba(172, 203, 238, 1) 0%, rgba(231, 240, 253, .5) 100%),
           url('/img/bnwmicke.jpg'),
           linear-gradient(to top, rgba(168, 237, 234, 1) 0%, rgba(254, 214, 227, 1) 100%);
           /* url('/img/graffgirl.jpg'), */
-        background-blend-mode:
-          darken,
-          screen,
-          hard-light,
-          luminosity,
-          normal;
         background-size:
+          50%,
           auto,
           auto 150%,
           auto,
           cover,
           auto,
           auto;
-        font-face: var(--font-copy);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position-y: 50%, 0%, 0%, 0%, 0%, 0%;
+        background-position-x: 50%, 0%, 0%, 0%, 0%, 0%;
+        font-family: var(--font-copy);
+      }
+      body.blue {
+        background-blend-mode:
+          soft-light,
+          darken,
+          screen,
+          hard-light,
+          luminosity,
+          normal;
+      }
+      body.red {
+        background-blend-mode:
+          difference,
+          exclusion,
+          overlay,
+          exclusion,
+          luminosity,
+          normal;
       }
       h1, h2 {
         font-family: var(--font-title);
@@ -142,9 +168,9 @@
       }
     </style>
 
-    <link rel="import" href="/src/djmicke-app/djmicke-app.html">
+    <link rel="import" href="src/djmicke-app/djmicke-app.html">
   </head>
-  <body>
+  <body class="red">
     <djmicke-app></djmicke-app>
   </body>
 </html>
