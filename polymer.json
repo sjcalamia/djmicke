@@ -1,6 +1,10 @@
 {
 	"entrypoint": "index.html",
-  "shell": "src/djmicke-app.html",
+	"shell": "src/djmicke-app.html",
+	"fragments": [
+		"src/djmicke-app/djmicke-app.html",
+		"src/djmicke-app/djmicke-logo.html"
+  ],
 	"sources": [
 		"src/**/*",
 		"data/**/*",
