@@ -1,3 +1,4 @@
-node_modules
 bower_components
 build
+.well-known
+node_modules
