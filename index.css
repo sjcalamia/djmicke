@@ -1,0 +1,147 @@
+
+:root {
+  --font-title: "Gruppo","Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-disp: "Comfortaa","Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-copy: "Geo","Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: "Inconsolata", monospace;
+
+  --fs-base: 1vw;
+  --fs-xs: .5em;
+  --fs-sm: .75em;
+  --fs-md: 1em;
+  --fs-lg: 1.5em;
+  --fs-xl: 2em;
+  --fs-xxl: 3em;
+
+  --header-height: 4em;
+}
+@media (max-width: 2500px) {
+  :root {
+    --fs-base: 1.2vw;
+    --fs-xs: .5em;
+    --fs-sm: .75em;
+    --fs-md: 1em;
+    --fs-lg: 1.5em;
+    --fs-xl: 2.25em;
+    --fs-xxl: 4em;
+  }
+}
+@media (max-width: 1500px) {
+  :root {
+    --fs-base: 1.3vw;
+    --fs-xs: .5em;
+    --fs-sm: .75em;
+    --fs-md: 1em;
+    --fs-lg: 1.5em;
+    --fs-xl: 2em;
+    --fs-xxl: 3em;
+  }
+}
+@media (max-width: 800px) {
+  :root {
+    --fs-base: 2.5vw;
+    --fs-xs: .69em;
+    --fs-sm: .8em;
+    --fs-md: 1em;
+    --fs-lg: 1.25em;
+    --fs-xl: 1.75em;
+    --fs-xxl: 2.5em;
+  }
+}
+@media (max-width: 500px) {
+  :root {
+    --fs-base: 5vw;
+    --fs-xs: .8em;
+    --fs-sm: .9em;
+    --fs-md: 1em;
+    --fs-lg: 1.125em;
+    --fs-xl: 1.25em;
+    --fs-xxl: 2em;
+  }
+}
+html {
+  font-size: var(--fs-base);
+}
+body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(33,33,33);
+  background-image:
+    url('/img/full-logo-white.png'),
+    linear-gradient(15deg, rgba(19, 84, 122, .75) 0%, rgba(128, 208, 199, .75) 100%),
+    url('/img/micke-multi.jpg'),
+    linear-gradient(to top, rgba(172, 203, 238, 1) 0%, rgba(231, 240, 253, .5) 100%),
+    url('/img/bnwmicke.jpg'),
+    linear-gradient(to top, rgba(168, 237, 234, 1) 0%, rgba(254, 214, 227, 1) 100%);
+    /* url('/img/graffgirl.jpg'), */
+  background-size:
+    50%,
+    auto,
+    125% auto,
+    auto,
+    cover,
+    auto,
+    auto;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position-y: 50%, 0%, 0%, 0%, 0%, 0%;
+  background-position-x: 50%, 0%, 0%, 0%, 0%, 0%;
+  font-family: var(--font-copy);
+}
+body.blue {
+  background-blend-mode:
+    soft-light,
+    darken,
+    screen,
+    hard-light,
+    luminosity,
+    normal;
+}
+body.red {
+  background-blend-mode:
+    difference,
+    exclusion,
+    overlay,
+    exclusion,
+    luminosity,
+    normal;
+}
+h1, h2 {
+  font-family: var(--font-title);
+}
+h3, h4, h5 {
+  font-family: var(--font-disp);
+}
+h1 {
+  font-size: var(--fs-xl);
+  font-style: normal;
+  font-variant: normal;
+}
+h2 {
+  font-size: var(--fs-lg);
+}
+h3 {
+  font-size: var(--fs-md);
+  font-style: normal;
+  font-variant: normal;
+}
+p {
+  font-family: var(--font-copy);
+  font-size: var(--fs-base);
+  font-style: normal;
+  font-variant: normal;
+}
+blockquote {
+  font-family: var(--font-disp);
+  font-size: var(--fs-lg);
+  font-style: normal;
+  font-variant: normal;
+}
+pre {
+  font-family: var(--font-pre);
+  font-size: var(--fs-sm);
+  font-style: normal;
+  font-variant: normal;
+}
+

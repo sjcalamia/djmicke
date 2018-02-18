@@ -1,3 +1,12 @@
 node_modules
 bower_components
 build
+*.pem
+*.crt
+*.chain.*
+*.zip
+*bundle
+img
+*ssl*
+*.txt
+zerologic.djmicke.com

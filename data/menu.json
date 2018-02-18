@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Spring Tour 2018",
+    "link": "/tour",
+    "icon": "airplane"
+  },
+  {
+    "name": "Booking Info",
+    "link": "/booking",
+    "icon": ""
+  },
+  {
+    "name": "New Releases",
+    "link": "/releases",
+    "icon": "record"
+  },
+  {
+    "name": "Social"
+  }
+]

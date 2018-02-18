@@ -1,0 +1,34 @@
+{
+  "tour":{
+    "name": "Spring 2018 Tour",
+    "link": "/tour",
+    "routes": [
+    ],
+    "events": [
+      {
+        "date":"02/10/2018",
+        "location":"Jacksonville,Fl",
+        "venue":{
+          "name": "Myth Nightclub"
+        },
+        "description":"Description text goes here."
+      },
+      {
+        "date":"02/23/2018",
+        "location":"Frederick, Md",
+        "venue":"TBA",
+        "description":"Description text goes here."
+      }
+    ]
+  },
+  "booking": {
+    "EPK":"/epk"
+  },
+  "releases": {
+    "Zero Logic": {
+      "SoundCloud": "",
+      "Spotify": "https://open.spotify.com/track/4aze0xAAo1OsLWwnti4FgG",
+      "Beatport": ""
+    }
+  }
+}

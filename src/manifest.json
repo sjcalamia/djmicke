@@ -1,0 +1,7 @@
+{
+  "name": "djmicke-com",
+  "short_name": "djmicke-com",
+  "description": "Micke - Producer | DJ",
+  "start_url": "/",
+  "display": "standalone"
+}
