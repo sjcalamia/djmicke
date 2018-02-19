@@ -1,4 +1,3 @@
-node_modules
 bower_components
 build
 zerologic.djmicke.com
@@ -6,3 +5,5 @@ zerologic.djmicke.com
 *.crt
 *.sw*
 *.txt
+.well-known
+node_modules
