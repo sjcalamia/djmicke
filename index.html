@@ -15,8 +15,9 @@
     <!-- // TODO: Automate MetaTags //-->
     <meta property="og:url"           content="https://djmicke.com/index.html" />
     <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="DJ Micke :: BuzzLife |  | Washington, D.C." />
-    <meta property="og:description"   content="Micke is hitting the scene heavy with original tracks & collaborations with such artists as Sandra Collins & Andy Woldman. He has continued to evolve his 20 year music partnership with EJ, as Temporal Mental, in parallel to his solo career. Micke still represents Buzzlife, helping to remind those in the know of how amazing this music can truly be… " />
+    <meta property="og:title"         content="Micke :: BuzzLife |  | Washington, D.C." />
+    <meta property="og:description"
+          content="Micke is hitting the scene heavy with original tracks & collaborations with Sandra Collins, Andy Woldman, and more. He has continued to evolve his 20 year music partnership with EJ, as Temporal Mental, in parallel to his solo career. Micke still represents Buzzlife, helping to remind those in the know of how amazing this music can truly be… " />
     <meta property="og:image"         content="https://djmicke.com/img/MickeAtTransit.jpg" />
 
     <!--// Icon links //-->
@@ -25,7 +26,7 @@
     <link rel="icon" type="image/png" sizes="194x194" href="/img/favicon-194x194.png?v=YAoGlWgkoE">
     <link rel="icon" type="image/png" sizes="192x192" href="/img/android-chrome-192x192.png?v=YAoGlWgkoE">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png?v=YAoGlWgkoE">
-    <link rel="mask-icon" href="/img/safari-pinned-tab.svg?v=YAoGlWgkoE" color="#3692a2">
+    <link rel="mask-icon" href="/img/safari-pinned-tab.svg?v=YAoGlWgkoE" color="#ffcc88">
     <link rel="shortcut icon" href="/img/favicon.ico?v=YAoGlWgkoE">
     <meta name="apple-mobile-web-app-title" content="DJ Micke">
     <meta name="application-name" content="DJ Micke">
@@ -111,27 +112,8 @@
         height: 100vh;
         padding: 0;
         margin: 0;
-        background-color: rgb(33,33,33);
-        background-image:
-          url('/img/full-logo-white.png'),
-          linear-gradient(15deg, rgba(19, 84, 122, .75) 0%, rgba(128, 208, 199, .75) 100%),
-          url('/img/micke-multi.jpg'),
-          linear-gradient(to top, rgba(172, 203, 238, 1) 0%, rgba(231, 240, 253, .5) 100%),
-          url('/img/bnwmicke.jpg'),
-          linear-gradient(to top, rgba(168, 237, 234, 1) 0%, rgba(254, 214, 227, 1) 100%);
-          /* url('/img/graffgirl.jpg'), */
-        background-size:
-          50%,
-          auto,
-          125% auto,
-          auto,
-          cover,
-          auto,
-          auto;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-position-y: 50%, 0%, 0%, 0%, 0%, 0%;
-        background-position-x: 50%, 0%, 0%, 0%, 0%, 0%;
+        background-color: rgb(0,0,0);
+
         font-family: var(--font-copy);
       }
       body.blue {
@@ -194,6 +176,7 @@
     <link rel="import" href="src/djmicke-app/djmicke-app.html">
   </head>
   <body class="red">
-    <djmicke-app></djmicke-app>
+    <djmicke-app>
+    </djmicke-app>
   </body>
 </html>
